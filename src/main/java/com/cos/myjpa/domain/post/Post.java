@@ -38,6 +38,7 @@ public class Post { // junit테스트는 dto를 만들고 거기서 valid 체크
 	@Lob //대용량 데이터
 	private String content;
 	
+	//순방향 매핑
 	//누가 적었는지
 	@ManyToOne(fetch = FetchType.EAGER) // many는 post one은 user 관계를 맺었다
 	@JoinColumn(name="userId")

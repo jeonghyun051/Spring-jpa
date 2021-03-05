@@ -29,10 +29,10 @@ public class TestController {
 	@PostMapping("/test/post")
 	public CommonRespDto<?> save(@RequestBody PostSaveReqDto postSaveReqDto) { // 받아야 할 값만 받아야함 Post로 받지 말것 !
 		
-		User user = new User(1L,"ssar","1234","ssar@nate.com",LocalDateTime.now());
+		//User user = new User(1L,"ssar","1234","ssar@nate.com",LocalDateTime.now());
 		
 		Post postEntity = postRepository.save(postSaveReqDto.toEntity()); // 실패 => 인셉션 타게끔 해야함
-		postEntity.setUser(user);
+		//postEntity.setUser(user);
 		return new CommonRespDto<>(1,"성공",postEntity); 
 	}
 	
